@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block isi %}
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">KOLEKSI MUSIM INI</p>
+    <h1>Main keras.<br>Tampil <span>lebih tajam.</span></h1>
+    <p class="sub">{{ brand.tagline }} Sneakers, bola, dan apparel pilihan untuk pemain dan kolektor.</p>
+    <div class="cta">
+      <a class="btn" href="#produk">Belanja sekarang</a>
+      <a class="btn ghost" href="#kategori">Lihat kategori</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true">👟</div>
+</section>
+
+<section id="kategori" class="blok">
+  <h2>Belanja per kategori</h2>
+  <div class="kategori">
+    {% for k in kategori %}
+      <a class="kat" href="#produk"><span>{{ k.icon }}</span>{{ k.nama }}</a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="produk" class="blok">
+  <h2>Pilihan unggulan</h2>
+  <div class="grid">
+    {% for p in produk %}
+    <article class="kartu">
+      <div class="foto" style="background:{{ p.warna }}">
+        {% if p.badge %}<em>{{ p.badge }}</em>{% endif %}
+        <span>{{ p.icon }}</span>
+      </div>
+      <div class="isi">
+        <small>{{ p.kategori }}</small>
+        <h3>{{ p.nama }}</h3>
+        <strong>{{ p.harga | rupiah }}</strong>
+        <a class="btn kecil" href="https://wa.me/?text=Halo%20saya%20mau%20pesan%20{{ p.nama | urlencode }}">Pesan via WhatsApp</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="promo">
+  <h2>DROP MINGGU INI: DISKON SAMPAI 30%</h2>
+  <p>Stok terbatas. Daftar newsletter untuk akses lebih awal.</p>
+  <a class="btn hi" href="#newsletter">Daftar sekarang</a>
+</section>
+
+<section class="blok">
+  <div class="untung">
+    {% for ikon, judul, isi in keunggulan %}
+      <div><span>{{ ikon }}</span><h3>{{ judul }}</h3><p>{{ isi }}</p></div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="newsletter" class="blok news">
+  <h2>Jangan ketinggalan drop terbaru</h2>
+  {% with pesan = get_flashed_messages(with_categories=true) %}
+    {% for kategori_pesan, teks in pesan %}<p class="flash {{ kategori_pesan }}">{{ teks }}</p>{% endfor %}
+  {% endwith %}
+  <form method="post" action="{{ url_for('subscribe') }}">
+    <input type="email" name="email" placeholder="Email kamu" aria-label="Email" required>
+    <button class="btn" type="submit">Daftar</button>
+  </form>
+</section>
+
+{% endblock %}

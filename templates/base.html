@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ brand.nama }} — {{ brand.tagline }}</title>
+  <link rel="stylesheet" href="/style.css">
+<body>
+  <div class="topbar">Gratis ongkir untuk pembelian di atas Rp1.000.000 &nbsp;|&nbsp; Tukar ukuran 14 hari</div>
+  <header class="nav">
+    <a class="logo" href="#atas">{{ brand.nama }}</a>
+    <nav>
+      <a href="#kategori">Kategori</a>
+      <a href="#produk">Produk</a>
+      <a href="#newsletter">Newsletter</a>
+    </nav>
+  </header>
+  <div id="atas"></div>
+  {% block isi %}{% endblock %}
+  <footer>
+    <strong>{{ brand.nama }}</strong>
+      <span><a href="mailto:{{ brand.email }}">{{ brand.email }}</a> · WhatsApp {{ brand.whatsapp }}</span>
+    <small>Website contoh untuk latihan. Seluruh produk dan harga hanyalah data fiktif.</small>
+  </footer>
+</body>
+</html>

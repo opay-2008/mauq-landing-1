@@ -36,7 +36,7 @@
         <small>{{ p.kategori }}</small>
         <h3>{{ p.nama }}</h3>
         <strong>{{ p.harga | rupiah }}</strong>
-        <a class="btn kecil" href="https://wa.me/?text=Halo%20saya%20mau%20pesan%20{{ p.nama | urlencode }}">Pesan via WhatsApp</a>
+        <a class="btn kecil" href="https://wa.me/{{ brand.wa_nomor }}?text=Halo%20saya%20mau%20pesan%20{{ p.nama | urlencode }}">Pesan via WhatsApp</a>
       </div>
     </article>
     {% endfor %}

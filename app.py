@@ -32,6 +32,7 @@ BRAND = {
     "tagline": "Gear buat yang hidup di lapangan.",
     "email": "halo@mauq.tech",
     "whatsapp": "+62 822-5134-2682",
+    "wa_nomor": "6282251342682",
 }
 
 KATEGORI = [

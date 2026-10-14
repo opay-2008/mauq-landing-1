@@ -36,11 +36,11 @@ BRAND = {
 }
 
 KATEGORI = [
-    {"icon": "👟", "nama": "Sneakers"},
-    {"icon": "🏀", "nama": "Basket"},
-    {"icon": "👕", "nama": "Jersey & Apparel"},
-    {"icon": "🎒", "nama": "Aksesoris"},
-    {"icon": "🔥", "nama": "Sale"},
+    {"icon": "🛳️", "nama": "Sneakers"},
+    {"icon": "⛴️", "nama": "Basket"},
+    {"icon": "🚢", "nama": "Jersey & Apparel"},
+    {"icon": "🛥️", "nama": "Aksesoris"},
+    {"icon": "🚤", "nama": "Sale"},
 ]
 
 PRODUK = [

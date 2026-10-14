@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block isi %}
+<section class="blok teks">
+  <h2>Hubungi Kami</h2>
+  <p>Ada pertanyaan soal ukuran atau stok? Chat langsung dengan tim kami.</p>
+  <ul>
+    <li>Email: <a href="mailto:{{ brand.email }}">{{ brand.email }}</a></li>
+    <li>WhatsApp: {{ brand.whatsapp }}</li>
+  </ul>
+  <a class="btn hi" href="https://wa.me/{{ brand.wa_nomor }}">Chat via WhatsApp</a>
+</section>
+{% endblock %}

@@ -71,6 +71,8 @@ footer strong{color:#fff;font-size:1.2rem}
 footer small{color:#8a8a85}
    footer a{color:#fff}
    footer a:hover{color:var(--oranye)}
+  .teks p{line-height:1.8;max-width:65ch}
+  .teks ul{line-height:1.9}
 @media (max-width:760px){
   .hero{grid-template-columns:1fr;text-align:center;min-height:auto}
   .hero>div:first-child{margin:0 auto}

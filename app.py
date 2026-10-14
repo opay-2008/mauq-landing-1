@@ -32,7 +32,7 @@ BRAND = {
     "tagline": "Gear buat yang hidup di lapangan.",
     "email": "halo@mauq.tech",
     "whatsapp": "+62 822-5134-2682",
-    "wa_nomor": "6282251342682",
+     "wa_nomor": "6282251342682",
 }
 
 KATEGORI = [
@@ -102,6 +102,18 @@ def subscribe():
         flash("Berhasil! Kamu akan dapat info drop terbaru.", "ok")
 
     return redirect(url_for("home", _anchor="newsletter"))
+
+
+# ---------------- HALAMAN TAMBAHAN (baru) ----------------
+@app.route("/tentang")
+def tentang():
+    return render_template("tentang.html", brand=BRAND)
+
+
+@app.route("/kontak")
+def kontak():
+    return render_template("kontak.html", brand=BRAND)
+# ---------------------------------------------------------
 
 
 if __name__ == "__main__":

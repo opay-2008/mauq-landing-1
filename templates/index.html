@@ -56,7 +56,28 @@
     {% endfor %}
   </div>
 </section>
+<section id="testimoni" class="blok">
+  <h2>Kata mereka</h2>
+  <div class="testi">
+    {% for t in testimoni %}
+    <figure class="testi-kartu">
+      <div class="bintang" aria-label="Rating {{ t.rating }} dari 5">{{ "★" * t.rating }}{{ "☆" * (5 - t.rating) }}</div>
+      <blockquote>{{ t.isi }}</blockquote>
+      <figcaption>{{ t.nama }} · {{ t.kota }}</figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</section>
 
+<section id="faq" class="blok">
+  <h2>Pertanyaan umum</h2>
+  {% for f in faq %}
+  <details class="faq-item">
+    <summary>{{ f.tanya }}</summary>
+    <p>{{ f.jawab }}</p>
+  </details>
+  {% endfor %}
+</section>
 <section id="newsletter" class="blok news">
   <h2>Jangan ketinggalan drop terbaru</h2>
   {% with pesan = get_flashed_messages(with_categories=true) %}

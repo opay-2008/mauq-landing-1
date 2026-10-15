@@ -60,6 +60,30 @@ KEUNGGULAN = [
 ]
 # =========================================================
 
+# ---------------- DATA TAMBAHAN (baru) ----------------
+TESTIMONI = [
+    {"nama": "Rizky", "kota": "Bandung", "rating": 5, "isi": "Sepatunya nyaman dipakai main, pengiriman cepat."},
+    {"nama": "Dinda", "kota": "Jakarta", "rating": 5, "isi": "Admin ramah dan sabar bantu pilih ukuran."},
+    {"nama": "Fajar", "kota": "Surabaya", "rating": 4, "isi": "Bahan jersey adem, tukar ukuran juga gampang."},
+]
+
+FAQ = [
+    {"tanya": "Apakah semua produk original?", "jawab": "Ya, semua produk kami 100% original."},
+    {"tanya": "Bagaimana cara memesan?", "jawab": "Klik tombol Pesan via WhatsApp pada produk, lalu tim kami membantu sampai selesai."},
+    {"tanya": "Bagaimana kalau ukuran tidak pas?", "jawab": "Kamu bisa menukar ukuran dalam 14 hari."},
+    {"tanya": "Berapa ongkos kirimnya?", "jawab": "Gratis ongkir untuk pembelian di atas Rp1.000.000. Di bawah itu, tanyakan lewat WhatsApp."},
+]
+
+SOSMED = [
+    {"nama": "Instagram", "url": "https://instagram.com/"},
+    {"nama": "TikTok", "url": "https://tiktok.com/"},
+]
+
+@app.context_processor
+def data_tambahan():
+    return dict(testimoni=TESTIMONI, faq=FAQ, sosmed=SOSMED)
+# ------------------------------------------------------
+
 
 @app.template_filter("rupiah")
 def rupiah(n):

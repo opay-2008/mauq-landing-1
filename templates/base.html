@@ -22,6 +22,13 @@
   <footer>
     <strong>{{ brand.nama }}</strong>
       <span><a href="mailto:{{ brand.email }}">{{ brand.email }}</a> · WhatsApp {{ brand.whatsapp }}</span>
+      <nav class="foot-nav">
+  <a href="/">Beranda</a>
+  <a href="/tentang">Tentang</a>
+  <a href="/kontak">Kontak</a>
+  <a href="/#faq">FAQ</a>
+  {% for s in sosmed %}<a href="{{ s.url }}" target="_blank" rel="noopener">{{ s.nama }}</a>{% endfor %}
+</nav>
     <small>Website contoh untuk latihan. Seluruh produk dan harga hanyalah data fiktif.</small>
   </footer>
 </body>

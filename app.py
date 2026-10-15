@@ -75,9 +75,10 @@ FAQ = [
 ]
 
 SOSMED = [
-    {"nama": "Instagram", "url": "https://instagram.com/"},
-    {"nama": "TikTok", "url": "https://tiktok.com/"},
+    {"nama": "Instagram", "url": "https://www.instagram.com/bravvly"},
+    {"nama": "TikTok", "url": "https://www.tiktok.com/@brvvpi"},
 ]
+
 
 @app.context_processor
 def data_tambahan():
